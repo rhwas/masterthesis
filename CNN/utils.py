@@ -207,4 +207,4 @@ def save_model(model, filepath):
     model_json = model.to_json()
     with open(filepath, "w") as json_file:
         json_file.write(model_json)
-    model.save_weights('models/weights_end.best.hdf5')
+    model.save_weights('CNN/models/weights_end.best.hdf5')

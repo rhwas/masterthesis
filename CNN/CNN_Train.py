@@ -29,9 +29,9 @@ DATA_FILEPATH       = 'data/train/complexbaseband/' + DIM + TAG + '/'
 BATCH_SIZE          = 10
 NUMBER_OF_CLASSES   = 2
 EPOCHS              = 10
-SAVE_BEST_WEIGHTS   = "models/weights_" + DIM + "_" + id + ".best.hdf5"
-SAVE_MODEL          = "models/model_" + DIM + "_" + id + ".json"
-SAVE_MODEL_HISTORY  = "models/trainingHistoryDict/trainHistoryDict_" + DIM + "_" + id + "" 
+SAVE_BEST_WEIGHTS   = "CNN/models/weights_" + DIM + "_" + id + ".best.hdf5"
+SAVE_MODEL          = "CNN/models/model_" + DIM + "_" + id + ".json"
+SAVE_MODEL_HISTORY  = "CNN/models/trainingHistoryDict/trainHistoryDict_" + DIM + "_" + id + "" 
 object_classes      = ['class1','class2']
 COMMENTS            = 'comments here' + ADD_COMMENT
 
