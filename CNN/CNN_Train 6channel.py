@@ -22,16 +22,16 @@ DIM                 = '10x10'
 RUN_NAME            = 'CNN_stacked_id-' + id + '_' + DIM
 ADD_COMMENT         = 'w30_measurements, TEST'
 nMEASUREMENTS       = '1,000'
-TAG                 = '_w30'
+TAG                 = '_6class'
 CSV_FILEPATH        = 'data/train_labels' + TAG + '.txt'
 DATA_FILEPATH       = 'data/train/complexbaseband/' + DIM + TAG + '/'
-BATCH_SIZE          = 10
-NUMBER_OF_CLASSES   = 2
-EPOCHS              = 10
-SAVE_BEST_WEIGHTS   = "models/weights_" + DIM + "_" + id + ".best.hdf5"
-SAVE_MODEL          = "models/model_" + DIM + "_" + id + ".json"
-SAVE_MODEL_HISTORY  = "models/trainingHistoryDict/trainHistoryDict_" + DIM + "_" + id + "" 
-object_classes      = ['class1','class2']
+BATCH_SIZE          = 100
+NUMBER_OF_CLASSES   = 6
+EPOCHS              = 5
+SAVE_BEST_WEIGHTS   = "CNN/models/weights_" + DIM + "_" + id + ".best.hdf5"
+SAVE_MODEL          = "CNN/models/model_" + DIM + "_" + id + ".json"
+SAVE_MODEL_HISTORY  = "CNN/models/trainingHistoryDict/trainHistoryDict_" + DIM + "_" + id + "" 
+object_classes      = ['noObject','circle','square','rect','Lrect','triangle']
 COMMENTS            = 'comments here' + ADD_COMMENT
 
 

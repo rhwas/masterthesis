@@ -37,8 +37,8 @@ RUN_NAME            = 'CapsNet_image_id-' + id + '_' + DIM
 ADD_COMMENT         = 'w30'
 nMEASUREMENTS       = '1,000'
 COMMENTS            = 'comments here' + ADD_COMMENT
-NUMBER_OF_CLASSES   = 2
-tag                 = 'w30'
+NUMBER_OF_CLASSES   = 6
+tag                 = '6class'
 csv_filepath        = 'data/train_labels_' + tag + '.txt'
 data_filepath       = 'data/train/complexbaseband/10x10_' + tag + '/'
 
@@ -142,7 +142,7 @@ def test(model, data, args):
     print('Confusion Matrix')
     print(confusion_matrix(y_test,y_pred))
     print('Classification Report')
-    print(classification_report(y_test, y_pred, target_names=['class1','class2']))
+    print(classification_report(y_test, y_pred, target_names=['noObject','circle','square','rect','Lrect','triangle']))
 
     print('-' * 30 + 'End: test' + '-' * 30)
 
@@ -178,7 +178,7 @@ if __name__ == "__main__":
 
     # setting the hyper parameters
     parser = argparse.ArgumentParser(description="Capsule Network on MNIST.")
-    parser.add_argument('--epochs', default=10, type=int)
+    parser.add_argument('--epochs', default=2, type=int)
     parser.add_argument('--batch_size', default=10, type=int)
     parser.add_argument('--lr', default=0.001, type=float,
                         help="Initial learning rate")

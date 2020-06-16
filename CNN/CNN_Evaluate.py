@@ -9,15 +9,15 @@ from sklearn.metrics import confusion_matrix, classification_report
 import numpy as np
 
 id                  = '#1'
-TAG                 = '_w30'
+TAG                 = '_6class_T2'
 DIM                 = '10x10'
-CONSTRUCTION_METHOD = 'matrix' # 'image' or 'matrix' or 'stacked'
+CONSTRUCTION_METHOD = 'stacked' # 'image' or 'matrix' or 'stacked'
 CSV_FILEPATH        = 'data/test_labels' + TAG + '.txt'
 DATA_FILEPATH       = 'data/test/complexbaseband/' + DIM + TAG + '/'
-NUMBER_OF_CLASSES   = 2
-WEIGHTS             = 'models/weights_' + DIM + '_' + id + '.best.hdf5'
-MODEL               = 'models/model_' + DIM + '_' + id + '.json'
-object_classes      = ['class1','class2']
+NUMBER_OF_CLASSES   = 6
+WEIGHTS             = 'CNN/models/weights_' + DIM + '_' + id + '.best.hdf5'
+MODEL               = 'CNN/models/model_' + DIM + '_' + id + '.json'
+object_classes      = ['noObject','circle','square','rect','Lrect','triangle']
 
 train_df, input_shape = data_from_csv_nonimage(CSV_FILEPATH, DATA_FILEPATH)
 
