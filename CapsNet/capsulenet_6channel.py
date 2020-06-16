@@ -43,8 +43,8 @@ nMEASUREMENTS       = '1,000'
 COMMENTS            = 'comments here' + ADD_COMMENT
 NUMBER_OF_CLASSES   = 6
 tag                 = '6class'
-csv_filepath        = 'data/train_labels_' + tag + '.txt'
-data_filepath       = 'data/train/complexbaseband/10x10_' + tag + '/'
+csv_filepath        = 'data/train_labels_spec_' + tag + '.txt'
+data_filepath       = 'data/train/spectrogram/100x10_' + tag + '/'
 
 def create_layers(input_img, n_class, routings):
     # Layer 1: Just a conventional Conv2D layer
